@@ -1,4 +1,4 @@
-# README #
+# Marvelite #
 
 A very simple sample app on ios architecture following the modular clean approach. Basically, it gives us the list of characters and comics from marvel API. There project has seen quite a few iterations and still needs some more work.
 
