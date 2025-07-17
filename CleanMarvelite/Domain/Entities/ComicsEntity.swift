@@ -20,7 +20,6 @@ public struct ComicsResponse: Decodable {
 
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-
         let results = try container.nestedContainer(keyedBy: DataKeys.self, forKey: .data)
         comics = try results.decode([ComicsEntity].self, forKey: .results)
     }

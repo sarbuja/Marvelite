@@ -8,7 +8,7 @@
 import Foundation
 
 public protocol CharactersListRemoteDataSource {
-    func getCharacters() async throws -> [CharacterDTO]
+    func getCharacters() async throws -> [CharacterEntity]
 }
 
 public class CharactersRemoteDataSourceImpl: CharactersListRemoteDataSource {
@@ -19,7 +19,7 @@ public class CharactersRemoteDataSourceImpl: CharactersListRemoteDataSource {
         self.request = request
     }
     
-    public func getCharacters() async throws -> [CharacterDTO] {
+    public func getCharacters() async throws -> [CharacterEntity] {
 
         guard let request = request else { throw APIError.invalidRequest }
         
@@ -29,7 +29,7 @@ public class CharactersRemoteDataSourceImpl: CharactersListRemoteDataSource {
               (200..<300) ~= urlResponse.statusCode else {
             throw APIError.statusCodeFail
         }
-        let object = try JSONDecoder().decode(CharactersResponse.self, from: data)
-        return object.characters
+        let result = try JSONDecoder().decode(CharactersResponse.self, from: data)
+        return result.characters
     }
 }

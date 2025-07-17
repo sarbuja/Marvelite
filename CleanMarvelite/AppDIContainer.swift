@@ -16,16 +16,11 @@ final class AppDIContainer: DIContainer {
     func homeDependencies() -> HomeViewController {
         // Usecases
         let charactersRemoteDataSource = CharactersRemoteDataSourceImpl(request: CharactersListRequest().urlRequest)
-        let charactersRepo = CharactersListRepositoryImpl(
-            charactersRemoteDataSource: charactersRemoteDataSource,
-            mapper: CharacterMapper()
-        )
+        let charactersRepo = CharactersListRepositoryImpl(charactersRemoteDataSource: charactersRemoteDataSource)
         let charactersUseCase = CharactersListUseCaseImpl(charactersRepository: charactersRepo)
 
         let comicsRemoteDataSource = ComicsListRemoteDataSourceImpl(request: ComicsListRequest().urlRequest)
-        let comicsRepo = ComicsListRepositoryImplementation(
-            comicsRemoteDataSource: comicsRemoteDataSource
-        )
+        let comicsRepo = ComicsListRepositoryImplementation(comicsRemoteDataSource: comicsRemoteDataSource)
         let comicsUseCase = ComicsListUseCaseImpl(comicsRepository: comicsRepo)
 
         // Router
@@ -65,10 +60,7 @@ final class AppDIContainer: DIContainer {
             request: CharacterDetailRequest(characterId: id).urlRequest,
             client: HttpClient()
         )
-        let detailRepo = CharacterDetailRepositoryImpl(
-            characterDetailRemoteDataSource: detailRemoteDataSource,
-            mapper: CharacterMapper()
-        )
+        let detailRepo = CharacterDetailRepositoryImpl(characterDetailRemoteDataSource: detailRemoteDataSource)
         let usecase = CharacterDetailUseCaseImpl(characterDetailRepo: detailRepo)
 
         // Router

@@ -48,7 +48,7 @@ extension CharacterDetailPresenterImpl: CharacterDetailPresenter {
     }
 
     public var comicsFeatured: String? {
-        return character?.comicsNames?.compactMap { $0 }.joined(separator: " \n\n ")
+        return character?.comics?.compactMap { $0.name }.joined(separator: " \n\n ")
     }
 
     public func presentWebContent() {

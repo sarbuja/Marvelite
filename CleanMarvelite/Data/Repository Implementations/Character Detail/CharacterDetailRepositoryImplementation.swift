@@ -8,16 +8,13 @@
 public class CharacterDetailRepositoryImpl: CharacterDetailRepository {
 
     private let characterDetailRemoteDataSource: CharacterDetailRemoteDataSource
-    private let mapper: CharacterMapper
-    
-    public init(characterDetailRemoteDataSource: CharacterDetailRemoteDataSource,
-                mapper: CharacterMapper) {
+
+    public init(characterDetailRemoteDataSource: CharacterDetailRemoteDataSource) {
         self.characterDetailRemoteDataSource = characterDetailRemoteDataSource
-        self.mapper = mapper
     }
 
     public func getCharacterDetail() async throws -> CharacterEntity {
-        let characterDTO = try await characterDetailRemoteDataSource.getCharacterDetail()
-        return mapper.map(from: characterDTO)
+        let character = try await characterDetailRemoteDataSource.getCharacterDetail()
+        return character
     }
 }

@@ -14,7 +14,7 @@ public enum APIError: Error {
 }
 
 public protocol CharacterDetailRemoteDataSource {
-    func getCharacterDetail() async throws -> CharacterDTO
+    func getCharacterDetail() async throws -> CharacterEntity
 }
 
 public class CharacterDetailRemoteDataSourceImpl: CharacterDetailRemoteDataSource {
@@ -27,8 +27,8 @@ public class CharacterDetailRemoteDataSourceImpl: CharacterDetailRemoteDataSourc
         self.client = client
     }
 
-    public func getCharacterDetail() async throws -> CharacterDTO {
-        
+    public func getCharacterDetail() async throws -> CharacterEntity {
+
         guard let request = request else { throw APIError.invalidRequest }
         
         let (data, response) = try await client.getResponse(from: request)
