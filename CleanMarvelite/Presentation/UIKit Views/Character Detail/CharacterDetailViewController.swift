@@ -17,9 +17,11 @@ public class CharacterDetailViewController: UIViewController {
     @IBOutlet var weblinkButton: UIButton!
 
     private var presenter: CharacterDetailPresenter
+    private let themeManager: ThemeManager
 
-    public init(presenter: CharacterDetailPresenter) {
+    public init(presenter: CharacterDetailPresenter, theme: Themeable) {
         self.presenter = presenter
+        self.themeManager = ThemeManager(theme: theme)
         super.init(nibName: "CharacterDetailViewController", bundle: Bundle(for: CharacterDetailViewController.self))
     }
 
@@ -42,6 +44,7 @@ public class CharacterDetailViewController: UIViewController {
     }
 
     private func displayCharacterDetail() {
+        view.backgroundColor = themeManager.primaryBackgroundColor
         title = presenter.title
         titleLabel.text = presenter.title
         contentLabel.text = presenter.description

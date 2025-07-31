@@ -68,7 +68,7 @@ final class AppDIContainer: DIContainer {
         )
 
         // Controller
-        let detailVC = CharacterDetailViewController(presenter: presenter)
+        let detailVC = CharacterDetailViewController(presenter: presenter, theme: MainAppTheme())
         detailRouter.viewController = detailVC
         return detailVC
     }

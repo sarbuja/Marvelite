@@ -23,8 +23,8 @@ struct MainAppTheme: Themeable {
     
     var neutralButtonColor: UIColor = .lightGray
     
-    var primaryTextColor: UIColor = .black
-    
+    var primaryTextColor: UIColor = .white
+
     var secondaryTextColor: UIColor = .lightGray
     
     var subtitleFont: UIFont = .systemFont(ofSize: 16)

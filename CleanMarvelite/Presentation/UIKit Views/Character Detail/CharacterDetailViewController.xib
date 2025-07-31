@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CharacterDetailViewController" customModule="PresentationLayer" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CharacterDetailViewController" customModule="CleanMarvelite" customModuleProvider="target">
             <connections>
                 <outlet property="contentLabel" destination="73F-NO-XZr" id="2bP-N9-oUT"/>
                 <outlet property="descriptionLabel" destination="kz8-2D-znw" id="mIR-uX-GOd"/>
@@ -23,13 +24,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uwb-9T-9kH">
-                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <rect key="frame" x="0.0" y="96" width="414" height="800"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ptt-Ap-seZ">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="1533"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fkC-hn-2Z3">
-                                    <rect key="frame" x="0.0" y="300" width="414" height="0.0"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
                                 </imageView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aiu-z3-vJJ" userLabel="ContentView">
                                     <rect key="frame" x="0.0" y="300" width="414" height="1233"/>
@@ -124,7 +125,7 @@
                 </scrollView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="RFQ-f8-wRf"/>
-            <color key="backgroundColor" red="1" green="0.80553968549999999" blue="0.5221299828" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="uwb-9T-9kH" secondAttribute="bottom" id="6y9-b7-QZg"/>
                 <constraint firstItem="uwb-9T-9kH" firstAttribute="leading" secondItem="RFQ-f8-wRf" secondAttribute="leading" id="bKV-7e-tOe"/>
