@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CryptoKit
 import CommonCrypto
 
 extension String {
@@ -23,5 +24,11 @@ extension String {
         result.deinitialize(count: digestLen)
 
         return String(format: hash as String)
+    }
+
+    func sha256() -> String {
+        let inputData = Data(self.utf8)
+        let hashed = SHA256.hash(data: inputData)
+        return hashed.map { String(format: "%02x", $0)}.joined()
     }
 }

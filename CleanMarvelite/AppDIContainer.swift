@@ -49,11 +49,6 @@ final class AppDIContainer: DIContainer {
         return homeViewController
     }
 
-    func favoritesDependencies() -> FavoritesViewController {
-        let favoritesViewController = FavoritesViewController(theme: MainAppTheme())
-        return favoritesViewController
-    }
-
     func characterDetailDependencies(id: Int) -> CharacterDetailViewController {
         // Usecase
         let detailRemoteDataSource = CharacterDetailRemoteDataSourceImpl(

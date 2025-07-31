@@ -7,12 +7,6 @@
 
 import Foundation
 
-public enum APIError: Error {
-    case invalidRequest
-    case statusCodeFail
-    case noData
-}
-
 public protocol CharacterDetailRemoteDataSource {
     func getCharacterDetail() async throws -> CharacterEntity
 }
@@ -33,14 +27,14 @@ public class CharacterDetailRemoteDataSourceImpl: CharacterDetailRemoteDataSourc
         
         let (data, response) = try await client.getResponse(from: request)
         
-        guard let urlResponse = response as? HTTPURLResponse,
-              (200..<300) ~= urlResponse.statusCode else {
-            throw APIError.statusCodeFail
+        if let urlResponse = response as? HTTPURLResponse {
+            if !((200..<300) ~= urlResponse.statusCode) {
+                throw APIError.statusCode(urlResponse.statusCode)
+            }
         }
-        
-        let decoder = JSONDecoder()
-        let object = try decoder.decode(CharactersResponse.self, from: data)
-        
+
+        let object = try JSONDecoder().decode(CharactersResponse.self, from: data)
+
         guard let character = object.characters.first else {
             throw APIError.noData
         }

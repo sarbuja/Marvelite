@@ -18,23 +18,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
 
-        window.rootViewController = createTabBarController()
+        window.rootViewController = UINavigationController(rootViewController: AppDIContainer.shared.homeDependencies())
         window.makeKeyAndVisible()
         self.window = window
-    }
-
-    private func createTabBarController() -> UITabBarController {
-        let home = AppDIContainer.shared.homeDependencies()
-        home.tabBarItem = UITabBarItem(tabBarSystemItem: .mostViewed, tag: 0)
-        
-        let favorites = AppDIContainer.shared.favoritesDependencies()
-        favorites.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
-
-        let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [home, favorites]
-            .compactMap { $0 }
-            .map { UINavigationController(rootViewController:  $0) }
-        return tabBarController
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

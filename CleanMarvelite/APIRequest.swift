@@ -8,8 +8,8 @@
 import Foundation
 
 enum Constants {
-    static let publicKey = "e7ee1f76e89344822828cfc9a5182e0d"
-    static let privateKey = "0042a0b0acd0f20963857275504d72a63579da4d"
+    static let publicKey = "50b05f02bce382d8b899d739a9937afb"
+    static let privateKey = "510911302595ca8b8f2585cb6dc3f84b7d169489"
 }
 
 enum RequestType: String {

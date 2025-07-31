@@ -35,8 +35,6 @@
 		14B4FA12266D785D0076C765 /* CharacterEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B4FA10266D785D0076C765 /* CharacterEntity.swift */; };
 		14B4FA15266D78690076C765 /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B4FA13266D78690076C765 /* CharacterDetailViewController.swift */; };
 		14B4FA16266D78690076C765 /* CharacterDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B4FA14266D78690076C765 /* CharacterDetailViewController.xib */; };
-		14B4FA19266D78720076C765 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B4FA17266D78720076C765 /* FavoritesViewController.swift */; };
-		14B4FA1A266D78720076C765 /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B4FA18266D78720076C765 /* FavoritesViewController.xib */; };
 		14B4FA1D266D787D0076C765 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B4FA1B266D787C0076C765 /* HomeViewController.swift */; };
 		14B4FA1E266D787D0076C765 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B4FA1C266D787D0076C765 /* HomeViewController.xib */; };
 		14B4FA23266D78860076C765 /* ComicsListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B4FA1F266D78860076C765 /* ComicsListView.xib */; };
@@ -61,10 +59,9 @@
 		14B4FA4D266D7AB10076C765 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B4FA4B266D7AB10076C765 /* UIViewController+Extension.swift */; };
 		14B4FA4E266D7AB10076C765 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B4FA4C266D7AB10076C765 /* UIView+Extension.swift */; };
 		832F7C8B2A254B74003C9426 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832F7C8A2A254B74003C9426 /* HttpClient.swift */; };
-		836B812528E4B81A0052C566 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836B812328E4B81A0052C566 /* WebViewController.swift */; };
-		836B812628E4B81A0052C566 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 836B812428E4B81A0052C566 /* WebViewController.xib */; };
 		838647712D59056B00AD4672 /* CharactersResponseSample.json in Resources */ = {isa = PBXBuildFile; fileRef = 838647702D59055600AD4672 /* CharactersResponseSample.json */; };
 		838647732D59059700AD4672 /* ComicsResponseSample.json in Resources */ = {isa = PBXBuildFile; fileRef = 838647722D59058A00AD4672 /* ComicsResponseSample.json */; };
+		839D65632E2998DB000EFD86 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839D65622E2998DB000EFD86 /* APIError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,8 +119,6 @@
 		14B4FA10266D785D0076C765 /* CharacterEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterEntity.swift; sourceTree = "<group>"; };
 		14B4FA13266D78690076C765 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
 		14B4FA14266D78690076C765 /* CharacterDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterDetailViewController.xib; sourceTree = "<group>"; };
-		14B4FA17266D78720076C765 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
-		14B4FA18266D78720076C765 /* FavoritesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoritesViewController.xib; sourceTree = "<group>"; };
 		14B4FA1B266D787C0076C765 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		14B4FA1C266D787D0076C765 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		14B4FA1F266D78860076C765 /* ComicsListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComicsListView.xib; sourceTree = "<group>"; };
@@ -147,10 +142,9 @@
 		14B4FA4B266D7AB10076C765 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		14B4FA4C266D7AB10076C765 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		832F7C8A2A254B74003C9426 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
-		836B812328E4B81A0052C566 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		836B812428E4B81A0052C566 /* WebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
 		838647702D59055600AD4672 /* CharactersResponseSample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CharactersResponseSample.json; sourceTree = "<group>"; };
 		838647722D59058A00AD4672 /* ComicsResponseSample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ComicsResponseSample.json; sourceTree = "<group>"; };
+		839D65622E2998DB000EFD86 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,6 +281,7 @@
 		14B4F9E0266D73F90076C765 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				839D65622E2998DB000EFD86 /* APIError.swift */,
 				832F7C8A2A254B74003C9426 /* HttpClient.swift */,
 				14B4F9E2266D743A0076C765 /* Repository Implementations */,
 			);
@@ -384,7 +379,6 @@
 			isa = PBXGroup;
 			children = (
 				14B4F9EE266D76EA0076C765 /* Character Detail */,
-				14B4F9ED266D76DE0076C765 /* Favourites */,
 				14B4F9EC266D76AE0076C765 /* Home */,
 			);
 			path = "UIKit Views";
@@ -399,17 +393,6 @@
 				14B4F9EF266D771B0076C765 /* Characters List */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		14B4F9ED266D76DE0076C765 /* Favourites */ = {
-			isa = PBXGroup;
-			children = (
-				14B4FA17266D78720076C765 /* FavoritesViewController.swift */,
-				14B4FA18266D78720076C765 /* FavoritesViewController.xib */,
-				836B812328E4B81A0052C566 /* WebViewController.swift */,
-				836B812428E4B81A0052C566 /* WebViewController.xib */,
-			);
-			path = Favourites;
 			sourceTree = "<group>";
 		};
 		14B4F9EE266D76EA0076C765 /* Character Detail */ = {
@@ -557,10 +540,8 @@
 				14B4FA2E266D788E0076C765 /* CharactersListCollectionViewCell.xib in Resources */,
 				148A1B2B25E3B39600EB9EA8 /* Themes.xcassets in Resources */,
 				143BA8A025A0A06600F5A7A5 /* Assets.xcassets in Resources */,
-				14B4FA1A266D78720076C765 /* FavoritesViewController.xib in Resources */,
 				14B4FA26266D78860076C765 /* ComicsListCollectionViewCell.xib in Resources */,
 				14B4FA23266D78860076C765 /* ComicsListView.xib in Resources */,
-				836B812628E4B81A0052C566 /* WebViewController.xib in Resources */,
 				14B4FA16266D78690076C765 /* CharacterDetailViewController.xib in Resources */,
 				14B4FA1E266D787D0076C765 /* HomeViewController.xib in Resources */,
 			);
@@ -590,7 +571,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				143BA96625A0A32900F5A7A5 /* String+Extension.swift in Sources */,
-				14B4FA19266D78720076C765 /* FavoritesViewController.swift in Sources */,
 				14B4FA35266D789A0076C765 /* Router Protocols.swift in Sources */,
 				14B4FA2D266D788E0076C765 /* CharactersListCollectionViewCell.swift in Sources */,
 				14B4FA07266D784A0076C765 /* CharactersListUseCase.swift in Sources */,
@@ -618,11 +598,11 @@
 				14B4FA1D266D787D0076C765 /* HomeViewController.swift in Sources */,
 				14B4FA24266D78860076C765 /* ComicsListCollectionViewCell.swift in Sources */,
 				14B4FA3A266D78A50076C765 /* CharacterDetailPresenter.swift in Sources */,
+				839D65632E2998DB000EFD86 /* APIError.swift in Sources */,
 				149C8FB725E9313D00B311C0 /* AppTheme.swift in Sources */,
 				143BA89925A0A06400F5A7A5 /* SceneDelegate.swift in Sources */,
 				14B4FA25266D78860076C765 /* ComicsListView.swift in Sources */,
 				14B4FA15266D78690076C765 /* CharacterDetailViewController.swift in Sources */,
-				836B812528E4B81A0052C566 /* WebViewController.swift in Sources */,
 				14B4FA33266D789A0076C765 /* CharacterDetailRouterImplementation.swift in Sources */,
 				14B4FA48266D7A4B0076C765 /* ThemeManager.swift in Sources */,
 				14B4FA0D266D78540076C765 /* ComicsListRepository.swift in Sources */,
@@ -839,7 +819,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R975DQM49V;
+				DEVELOPMENT_TEAM = 2F5CUZHNZT;
 				INFOPLIST_FILE = CleanMarveliteTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -861,7 +841,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R975DQM49V;
+				DEVELOPMENT_TEAM = 2F5CUZHNZT;
 				INFOPLIST_FILE = CleanMarveliteTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -882,7 +862,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R975DQM49V;
+				DEVELOPMENT_TEAM = 2F5CUZHNZT;
 				INFOPLIST_FILE = CleanMarveliteUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -902,7 +882,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R975DQM49V;
+				DEVELOPMENT_TEAM = 2F5CUZHNZT;
 				INFOPLIST_FILE = CleanMarveliteUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

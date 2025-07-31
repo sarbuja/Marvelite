@@ -22,13 +22,15 @@ public class ComicsListRemoteDataSourceImpl: ComicsListRemoteDataSource {
     public func getComics() async throws -> [ComicsEntity] {
 
         guard let request = request else { throw APIError.invalidRequest }
-        
+
         let (data, response) = try await URLSession.shared.data(for: request)
-        
-        guard let urlResponse = response as? HTTPURLResponse,
-              (200..<300) ~= urlResponse.statusCode else {
-            throw APIError.statusCodeFail
+
+        if let urlResponse = response as? HTTPURLResponse {
+            if !((200..<300) ~= urlResponse.statusCode) {
+                throw APIError.statusCode(urlResponse.statusCode)
+            }
         }
+
         let object = try JSONDecoder().decode(ComicsResponse.self, from: data)
         return object.comics
     }

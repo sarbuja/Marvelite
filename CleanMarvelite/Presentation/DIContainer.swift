@@ -9,6 +9,5 @@ import UIKit
 
 public protocol DIContainer: AnyObject {
     func homeDependencies() -> HomeViewController
-    func favoritesDependencies() -> FavoritesViewController
     func characterDetailDependencies(id: Int) -> CharacterDetailViewController
 }
